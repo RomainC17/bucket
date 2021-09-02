@@ -47,6 +47,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $nom;
 
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
+    private $pseudo;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -156,6 +161,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setNom(string $nom): self
     {
         $this->nom = $nom;
+
+        return $this;
+    }
+
+    public function getPseudo(): ?string
+    {
+        return $this->pseudo;
+    }
+
+    public function setPseudo(string $pseudo): self
+    {
+        $this->pseudo = $pseudo;
 
         return $this;
     }
