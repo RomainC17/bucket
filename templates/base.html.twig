@@ -26,10 +26,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             {% set route_name = app.request.attributes.get('_route')%}
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <a class="nav-link  {% if route_name == 'admin_home' %}active{% endif %}" href="{{ path('admin_home')}}">modifier</a></li>
+                <a class="nav-link  {% if route_name == 'admin_home' %}active{% endif %}" href="{{ path('admin_home')}}">Modifier</a></li>
                 <li class="nav-item">
-                <a class="nav-link  {% if route_name == 'ajouter' %}active{% endif %}" href="{{ path('ajouter')}}">ajouter</a></li>
-                <a class="nav-link {% if route_name == 'app_register' %}active{% endif %}" href="{{ path('app_register') }}">s'inscrire</a>
+                <a class="nav-link  {% if route_name == 'ajouter' %}active{% endif %}" href="{{ path('ajouter')}}">Ajouter</a></li>
+                <a class="nav-link {% if route_name == 'app_register' %}active{% endif %}" href="{{ path('app_register') }}">S'inscrire</a>
+                <a class="nav-link {% if route_name == 'app_login' %}active{% endif %}" href="{{ path('app_login') }}">Se connecter</a>
             </ul>
             {{ route_name}}
         </div>
