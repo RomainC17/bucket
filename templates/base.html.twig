@@ -43,10 +43,6 @@
         </div>
     </div>
 </nav>
- {% if app.user %}
-        <h5> <em> Content de vous voir, {{ app.user.pseudo }} <em> </h5>
-    </div>
-{% endif %}
 <section class="container px-5">
     {% block central %}
     {% endblock %}

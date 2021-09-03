@@ -6,6 +6,10 @@
 {% endblock %}
 
 {% block central %}
+ {% if app.user %}
+        <h5> <em> Content de vous voir, {{ app.user.pseudo }} <em> </h5>
+    </div>
+{% endif %}
 	<h1>Bucket List</h1>
     <div class="col-6">
 	<table class="table table-striped">
